@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Level Information</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f5f3;
+      color: #222;
+    }
+
+    header {
+      background: #087d45;
+      color: white;
+      text-align: center;
+      padding: 22px 12px;
+    }
+
+    header h1 {
+      font-size: 25px;
+    }
+
+    header p {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 35px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #00000012;
+    }
+
+    .badge {
+      background: #e2f5e9;
+      color: #087d45;
+      text-align: center;
+      padding: 12px;
+      border-radius: 9px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 17px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #087d45;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #066638;
+    }
+
+    #message {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wallet Level Guide</h1>
+    <p>Account Level Information Demo</p>
+  </header>
+
+  <main class="container">
+    <div class="badge">Current Level: L0</div>
+
+    <h2>Account Level Guide</h2>
+
+    <p class="description">
+      Learn about wallet account levels and the
+      steps required to upgrade your account.
+    </p>
+
+    <form id="levelForm">
+      <label for="mobile">Mobile Number (Optional)</label>
+      <input
+        type="tel"
+        id="mobile"
+        placeholder="03XX XXXXXXX"
+        pattern="03[0-9]{9}"
+      >
+
+      <button type="submit">View Upgrade Information</button>
+    </form>
+
+    <p id="message" role="status"></p>
+  </main>
+
+  <footer>
+    Demo website — Not affiliated with JazzCash.
+  </footer>
+
+  <script>
+    document.getElementById("levelForm").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("message").textContent =
+          "For an actual account upgrade, use the official " +
+          "JazzCash app or contact official customer support.";
+      }
+    );
+  </script>
+
+</body>
+</html>
